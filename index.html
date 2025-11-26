@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocify</title>
+    <meta name="description" content="Generate a grocery shopping list from your favorite dishes.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Grocify</h1>
+            <p>Enter your dishes, get your shopping list.</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <div class="input-group">
+                    <input type="text" id="dish-input" placeholder="e.g., Spaghetti Bolognese" aria-label="Dish name">
+                    <button id="add-dish-btn">Add Dish</button>
+                </div>
+                <div id="suggestions" class="suggestions hidden"></div>
+            </section>
+
+            <section class="content-grid">
+                <div class="card dish-card">
+                    <h2>Your Menu</h2>
+                    <ul id="dish-list" class="list-group">
+                        <!-- Dishes will be added here -->
+                        <li class="empty-state">No dishes added yet.</li>
+                    </ul>
+                    <button id="generate-btn" class="action-btn" disabled>Generate Shopping List</button>
+                </div>
+
+                <div class="card list-card">
+                    <h2>Shopping List</h2>
+                    <ul id="shopping-list" class="list-group">
+                        <!-- Ingredients will be added here -->
+                        <li class="empty-state">Add dishes to generate list.</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
